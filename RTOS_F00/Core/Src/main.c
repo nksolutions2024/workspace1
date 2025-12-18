@@ -97,11 +97,11 @@ int main(void) {
 	/* USER CODE BEGIN 2 */
 	SEGGER_SYSVIEW_Conf();
 	if (xTaskCreate(Task1, "task1", stackSize, NULL, tskIDLE_PRIORITY + 2,
-			NULL) == pdPASS) {
+	NULL) == pdPASS) {
 		if (xTaskCreate(Task2, "task2", stackSize, NULL, tskIDLE_PRIORITY + 1,
-				NULL) == pdPASS) {
+		NULL) == pdPASS) {
 			if (xTaskCreate(Task3, "task3", stackSize, NULL,
-					tskIDLE_PRIORITY + 1, NULL) == pdPASS) {
+			tskIDLE_PRIORITY + 1, NULL) == pdPASS) {
 				//start the scheduler - shouldn't return unless there's a problem
 				vTaskStartScheduler();
 			}
@@ -235,7 +235,6 @@ void lookBusy(void) {
 	}
 	SEGGER_SYSVIEW_PrintfHost("looking busy\n");
 }
-/* USER CODE END 4 */
 /* USER CODE END 4 */
 
 /**
